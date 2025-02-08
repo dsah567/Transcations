@@ -11,9 +11,9 @@ Before you begin, ensure you have met the following requirements:
 1. **Clone the repository: (if not cloned and if you have cloned move to next step)**
     ```sh
     git clone https://github.com/dsah567/Transcations
-2. **Navigate to the project directory: client**
+2. **Navigate to the project directory: backend**
     ```sh
-    cd Transcations/client
+    cd Transcations/backend
     ```
 3. **Install dependencies:**
     ```sh
@@ -24,6 +24,9 @@ Before you begin, ensure you have met the following requirements:
     yarn install
     ```
 
+## Configuration
+
+1. I have knowingly left environment variables for easy setup
 
 ## Running the Project
 
@@ -38,10 +41,10 @@ Before you begin, ensure you have met the following requirements:
 
 2. **Open your browser and visit:**
     ```
-    http://localhost:5174
+    http://localhost:8000
     ```
 
-## check backend directory for backend instalation
+## check client directory for frontend instalation
 ## Contact
 
 If you have any questions or feedback, please contact [sahd7929@gmail.com](mailto:sahd7929@gmail.com).
