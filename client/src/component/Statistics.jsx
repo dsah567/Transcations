@@ -1,4 +1,4 @@
-import React, {  use, useLayoutEffect, useState } from 'react'
+import React, {   useLayoutEffect, useState } from 'react'
 import axios from 'axios'
 
 export default function Statistics() {
@@ -15,7 +15,7 @@ export default function Statistics() {
     useLayoutEffect(()=>{
       const fetchOrders = async () => {
         try {
-          const { data } = await axios.get(`http://localhost:8000/order/statistics/${month}`)
+          const { data } = await axios.get(`https://transcations.onrender.com/order/statistics/${month}`)
           console.log(data);
           setOrders(data)
           setDataLoading(false)

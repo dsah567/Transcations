@@ -11,7 +11,7 @@ export default function Orders () {
   useLayoutEffect(()=>{
     const fetchOrders = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:8000/order/${currentPage}`)
+        const { data } = await axios.get(`https://transcations.onrender.com/order/${currentPage}`)
         console.log(data);
         setOrders(data.data)
         setMaxPage(data.pages)

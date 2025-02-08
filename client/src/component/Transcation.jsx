@@ -24,14 +24,14 @@ export default function Transcation()  {
 
         
         if (!searchText) {
-        const { data } = await axios.get(`http://localhost:8000/order/m/${month}/${currentPage}`)
+        const { data } = await axios.get(`https://transcations.onrender.com/order/m/${month}/${currentPage}`)
         console.log(data);
         setOrders(data.data)
         setMaxPage(data.pages)
         setDataLoading(false)}
 
         else {
-        const { data } = await axios.get(`http://localhost:8000/order/mt/${month}/${searchText}/${currentPage}`)
+        const { data } = await axios.get(`https://transcations.onrender.com/order/mt/${month}/${searchText}/${currentPage}`)
                                      
         console.log(data);
         setOrders(data.data)
