@@ -6,17 +6,17 @@ app.use(express.json({limit: "16kb"}))
 app.use(express.urlencoded({extended: true, limit: "16kb"}))
 
 //importing routes
-
+import detailRouter from "./routes/orderDetails.route.js"
 
 
 
 //middleware to check if data exist or not in database, if not exist then insert data from https://s3.amazonaws.com/roxiler.com/product_transaction.json website in json format
 app.use( async (req, res, next)=> {
     try {
-        console.log("Checking if order exists in the database");
+        // console.log("Checking if order exists in the database");
         
         const orderExists = await Order.find( {id: 1})
-        console.log(orderExists);
+        // console.log(orderExists);
         
         if(orderExists.length > 0){
              next()
@@ -49,5 +49,7 @@ app.get("/",(req, res) => {
 
 
 //using routes
+app.use("/order", detailRouter)
+
 
 export {app}
