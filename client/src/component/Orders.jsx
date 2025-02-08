@@ -84,7 +84,7 @@ export default function Orders () {
         >
           Previous
         </button>
-        <span className="text-xl mx-2">Page {currentPage}</span>
+        <span className="text-xl mx-2">Page {currentPage} of {maxPage} </span>
         <button
           onClick={() => setCurrentPage((prev) => prev + 1)}
           disabled={currentPage>=maxPage}
